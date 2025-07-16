@@ -161,5 +161,103 @@
         <button type="submit">Submit</button>
       </form>
     </fieldset>
+
+    <!--
+    
+    === Number Range Validations ===
+    
+    1. There are many situations where the range of values a user can enter will also need to be validated
+    2. This is done with the min and max attributes, these work with number-based form controls only such as number, dates, and time inputs
+
+    === Min Validation ===
+
+    1. Minimum value validation represents the minimum number the form control should accept
+    2. This is done using the min attribute with an integer value
+
+    Example:
+
+    <form action="#" method="get">
+        <div>
+            <label for="quantity">Quantity</label>
+        </div>
+        <input type="number" id="quantity" name="quantity" min="1" value="0">
+        <div>
+            <button type="submit">Place Order</button>
+        </div>
+    </form>
+
+    === Max Validation ===
+
+    1. Maximum value validation represents the maximum number the form should accept
+    2. This is done using the max attribute with an integer value
+    
+    Example:
+
+    <form action="#" method="get">
+        <div>
+            <label for="passengers">Passengers</label>
+        </div>
+        <input type="number" id="passengers" name="passengers" max="5" value="0">
+        <div>
+            <button type="submit">Book</button>
+        </div>
+    </form>
+
+    -->
+
+    <!-- Min Validation -->
+    <fieldset>
+      <legend>Min Value Validation</legend>
+      <form action="#">
+        <div>
+          <label for="quantity_min">Quantity:</label>
+          <input
+            type="number"
+            id="quantity_min"
+            name="quantity_min"
+            min="1"
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </fieldset>
+
+    <!-- Max Validation -->
+    <fieldset>
+      <legend>Max Value Validation</legend>
+      <form action="#">
+        <div>
+          <label for="quantity_max">Quantity:</label>
+          <input
+            type="number"
+            id="quantity_max"
+            name="quantity_max"
+            max="10"
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </fieldset>
+
+    <!-- Combination Validation -->
+    <fieldset>
+      <legend>Combination Validation</legend>
+      <form action="#">
+        <div>
+          <label for="combination">Age:</label>
+          <input
+            type="number"
+            id="combination"
+            name="combination"
+            min="1"
+            max="100"
+            required
+          />
+        </div>
+        <button type="submit">Enter</button>
+      </form>
+    </fieldset>
   </body>
 </html>
