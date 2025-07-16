@@ -317,5 +317,52 @@
         </div>
       </form>
     </fieldset>
+
+    <!-- 
+    
+    Styling Validations 
+    
+    1. Form control elements can be targetted depending on if they have passed or failed using the :valid and :invalid pseudo-classes
+    
+    Example:
+
+    <form action="#" method="get">
+        <div>
+            <label for="email">Email</label>
+        </div>
+        <input type="email" id="email" name="email">
+        <div>
+            <label for="website">Website</label>
+        </div>
+        <input type="url" id="website" name="website">
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    2. Here valid inputs are given a green border, which is shown initially since they ar enot required fields and are therefore valid
+    3. When a field is invalid, it will show a red border instead
+    
+    -->
+
+    <!-- Styling Validations -->
+    <fieldset>
+      <legend>Styling Validation</legend>
+      <form action="#" method="get" id="styled-form">
+        <div>
+          <label for="email">Email</label>
+        </div>
+        <input type="email" id="email" name="email" />
+
+        <div>
+          <label for="website">Website</label>
+        </div>
+        <input type="url" id="website" name="website" />
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </fieldset>
   </body>
 </html>
