@@ -259,5 +259,63 @@
         <button type="submit">Enter</button>
       </form>
     </fieldset>
+
+    <!--
+    
+    === Pattern Valiations ===
+    
+    1. To ensure the information gained from users is correct, sometimes the data must follow a particular pattern
+    2. Examples of data that needs a specific pattern include, postcode, card numbers, phone numbers, etc
+    3. To add a pattern validation, you use the pattern atribute with a regular expression as the value (regular expressions are patterns used to match character combinations in strings)
+
+    Example:
+
+    <form action="#" method="get">
+        <div>
+            <label for="zip_code">Postal / Zip Code:</label>
+        </div>
+        <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" required>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    4. When the user enters something into this form and its incorrect it will tell the user to match the requested format, which is not very user friendly
+    5. It is good practice to use a placeholder attribute to show usersexactly what they need to input
+
+    Example:
+
+    <form action="#" method="get">
+        <div>
+            <label for="zip_code">Postal / Zip Code:</label>
+        </div>
+        <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" title="Please enter a valid zip code, example: 65251" placeholder="65251" required>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    
+    -->
+
+    <!-- Pattern Validation -->
+    <fieldset>
+      <legend>Pattern Validation: Postcode</legend>
+      <form action="#">
+        <div>
+          <label for="postcode">UK Postcode:</label>
+        </div>
+        <input
+          type="text"
+          id="postcode"
+          name="postcode"
+          pattern="([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})"
+          placeholder="A12 3BC"
+          required
+        />
+        <div>
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    </fieldset>
   </body>
 </html>
