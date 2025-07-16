@@ -65,5 +65,101 @@
         <button type="submit">Login</button>
       </form>
     </fieldset>
+
+    <!--
+    
+    === Text Length Validations ===
+    
+    1. Often forms should have a minimum or maximum amount of text in each field
+    2. Password fields benefit from having a minimum amount of characters to ensure they are complex enough to protect information
+    3. To add a minmum length validation you use the minlength attribute with an integer as the value that represents the minimum amount of characters
+
+    Example:
+
+    <form action="#" method="get">
+        <div>
+            <textarea placeholder="What's happening?" minlength="3"></textarea>
+        </div>
+        <button type="submit">Tweet</button>
+    </form>
+
+    4. To add a maximum length validation, you use the maxlength attribute with an integer value that represents the maximum number of characters
+
+    Example:
+
+    <form action="#" method="get">
+        <div>
+            <textarea placeholder="What's happening?" maxlength="20"></textarea>
+        </div>
+        <button type="submit">Tweet</button>
+    </form>
+
+    5. minlength, maxlength, and required can be used together on the same inputs
+
+    Example:
+
+    <form action="#" method="get">
+        <div>
+            <textarea placeholder="What's happening?" minlength="5" maxlength="20"></textarea>
+        </div>
+        <button type="submit">Tweet</button>
+    </form>
+    
+    -->
+
+    <!-- Minlength Validation-->
+    <fieldset>
+      <legend>Minlength Validation</legend>
+      <form action="#">
+        <div>
+          <label for="min_pass">Password:</label>
+          <input
+            type="password"
+            id="min_pass"
+            name="min_pass"
+            minlength="8"
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </fieldset>
+
+    <!-- Maxlength Validation-->
+    <fieldset>
+      <legend>Maxlength Validation</legend>
+      <form action="#">
+        <div>
+          <label for="max_user">Username:</label>
+          <input
+            type="text"
+            id="max_user"
+            name="max_user"
+            maxlength="15"
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </fieldset>
+
+    <!-- Combination Validation-->
+    <fieldset>
+      <legend>Combination Validation</legend>
+      <form action="#">
+        <div>
+          <label for="max_user">Username:</label>
+          <input
+            type="text"
+            id="max_user"
+            name="max_user"
+            maxlength="15"
+            minlength="3"
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </fieldset>
   </body>
 </html>
